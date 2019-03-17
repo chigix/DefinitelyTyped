@@ -7,10 +7,10 @@
 //                 Arthur Corenzan <https://github.com/haggen>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
-/// <reference types="rx" />
 
 import { EventEmitter } from 'events';
 import * as inquirer from 'inquirer';
+import { Observable } from 'rxjs';
 
 type Callback = (err: any) => void;
 
@@ -21,7 +21,7 @@ declare namespace Generator {
          */
         store?: boolean;
     }
-    type Questions = Question | Question[] | Rx.Observable<Question>;
+    type Questions = Question | Question[] | Observable<Question>;
     type Answers = inquirer.Answers;
 
     class Storage {
